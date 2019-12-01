@@ -26,7 +26,7 @@
  * ******************************************************************** */
 
 // uncommend following line to have debug output on serial interface
-#define DEBUG_VIA_SERIAL
+//#define DEBUG_VIA_SERIAL
 
 // arduino default LED
 #define Led_Pin 13      // arduino LED hardwired for blinking
