@@ -6,12 +6,12 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "NanoCTRL4AD4351"
-Date "2019-10-30"
-Rev "v02"
+Date "2019-12-01"
+Rev "v03"
 Comp ""
 Comment1 "Have fun!"
-Comment2 "https://oshpark.com/shared_projects/7aTWM54V"
-Comment3 "PCB may be found at:"
+Comment2 ""
+Comment3 ""
 Comment4 ""
 $EndDescr
 Text Notes 3950 5250 0    50   ~ 0
@@ -668,7 +668,6 @@ Text Notes 1400 6850 0    50   ~ 0
 Wire Wire Line
 	2900 2400 5350 2400
 NoConn ~ 5100 4250
-NoConn ~ 5100 5550
 NoConn ~ 5100 5150
 NoConn ~ 5100 4550
 NoConn ~ 5100 4450
@@ -880,4 +879,39 @@ Wire Wire Line
 Connection ~ 5350 2400
 Wire Wire Line
 	5350 2400 6850 2400
+$Comp
+L Connector:Conn_01x02_Male J7
+U 1 1 5DE4BAD7
+P 4700 5950
+F 0 "J7" V 4650 5950 50  0000 R CNN
+F 1 "Conn_01x02_Male" V 4550 6250 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 4700 5950 50  0001 C CNN
+F 3 "~" H 4700 5950 50  0001 C CNN
+	1    4700 5950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR08
+U 1 1 5DE4E84C
+P 4700 5750
+F 0 "#PWR08" H 4700 5500 50  0001 C CNN
+F 1 "GND" H 4705 5577 50  0000 C CNN
+F 2 "" H 4700 5750 50  0001 C CNN
+F 3 "" H 4700 5750 50  0001 C CNN
+	1    4700 5750
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R9
+U 1 1 5DE4F67B
+P 4950 5550
+F 0 "R9" V 4743 5550 50  0000 C CNN
+F 1 "220" V 4834 5550 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 4880 5550 50  0001 C CNN
+F 3 "~" H 4950 5550 50  0001 C CNN
+	1    4950 5550
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4800 5550 4800 5750
 $EndSCHEMATC
