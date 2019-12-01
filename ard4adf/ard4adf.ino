@@ -26,7 +26,7 @@
  * ******************************************************************** */
 
 // uncommend following line to have debug output on serial interface
-//#define DEBUG_VIA_SERIAL
+#define DEBUG_VIA_SERIAL
 
 // arduino default LED
 #define Led_Pin 13      // arduino LED hardwired for blinking
@@ -61,9 +61,9 @@ int X2;                 //  v_2=4    on that Input-Pin
 
 int read_jumpers() {
     // evaluate the three jumpers at once
-    X0 = digitalRead(X0_Pin) & 0x01;
-    X1 = digitalRead(X1_Pin) & 0x01;
-    X2 = digitalRead(X2_Pin) & 0x01;
+    X0 = (!digitalRead(X0_Pin)) & 0x01;
+    X1 = (!digitalRead(X1_Pin)) & 0x01;
+    X2 = (!digitalRead(X2_Pin)) & 0x01;
     jumpers = X0  + (X1 * 2) + (X2 * 4);
 #ifdef DEBUG_VIA_SERIAL
     Serial.print("Read jumpers:");
