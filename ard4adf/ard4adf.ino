@@ -131,36 +131,40 @@ void set_freq_0() {                 //  calculated for 10 MHz Ref.
 #ifdef DEBUG_VIA_SERIAL
     Serial.println("ADF4351 set freq 0 command");
 #endif
-    ADF4351_Frequenz( 0x00580005);  // Reg 5  101MHz
-    ADF4351_Frequenz( 0x0081043C);  // Reg 4
+//Q:10 Freq:  101.00MHz RFstep: 10.000kHz Regs:   00580005  00dc803c  000004b3  18004e42  08001f41  00a18640
+    ADF4351_Frequenz( 0x00580005);  // Reg 5
+    ADF4351_Frequenz( 0x00dc803c);  // Reg 4
     ADF4351_Frequenz( 0x000004B3);  // Reg 3
-    ADF4351_Frequenz( 0x18015E42);  // Reg 2
-    ADF4351_Frequenz( 0x080081F1);  // Reg 1
-    ADF4351_Frequenz( 0x03280000);  // Reg 0  101.000.000,0 Hz
+    ADF4351_Frequenz( 0x18004e42);  // Reg 2
+    ADF4351_Frequenz( 0x08001f41);  // Reg 1
+    ADF4351_Frequenz( 0x00a18640);  // Reg 0   101.000.000,0 Hz
 }
 
 void set_freq_1() {                 //  calculated for 10 MHz Ref.
 #ifdef DEBUG_VIA_SERIAL
     Serial.println("ADF4351 set freq 1 command");
 #endif
+//Q:10 Freq:  116.00MHz RFstep: 10.000kHz Regs:   00580005  00dc803c  000004b3  18004e42  08001f41  00b98640
     ADF4351_Frequenz( 0x00580005);  // Reg 5
-    ADF4351_Frequenz( 0x0081043C);  // Reg 4
+    ADF4351_Frequenz( 0x00dc803c);  // Reg 4
     ADF4351_Frequenz( 0x000004B3);  // Reg 3
-    ADF4351_Frequenz( 0x18015E42);  // Reg 2
-    ADF4351_Frequenz( 0x080081F1);  // Reg 1
-    ADF4351_Frequenz( 0x03A00000);  // Reg 0   116.000.000,0 Hz
+    ADF4351_Frequenz( 0x18004e42);  // Reg 2
+    ADF4351_Frequenz( 0x08001f41);  // Reg 1
+    ADF4351_Frequenz( 0x00b98640);  // Reg 0   116.000.000,0 Hz
 }
 
 void set_freq_2() {                 //  calculated for 10 MHz Ref.
 #ifdef DEBUG_VIA_SERIAL
     Serial.println("ADF4351 set freq 2 command");
 #endif
+//Q:10 Freq: 40.00MHz RFstep: 10.000kHz Regs:   00580005  00ec803c  000004b3  18004e42  08001f41  00800000
+
     ADF4351_Frequenz( 0x00580005);  // Reg 5
-    ADF4351_Frequenz( 0x00C1043C);  // Reg 4
+    ADF4351_Frequenz( 0x00ec803c);  // Reg 4
     ADF4351_Frequenz( 0x000004B3);  // Reg 3
-    ADF4351_Frequenz( 0x18015E42);  // Reg 2
-    ADF4351_Frequenz( 0x080083E9);  // Reg 1
-    ADF4351_Frequenz( 0x02400000);  // Reg 0   144.000.000,0 Hz
+    ADF4351_Frequenz( 0x18004e42);  // Reg 2
+    ADF4351_Frequenz( 0x08001f41);  // Reg 1
+    ADF4351_Frequenz( 0x00800000);  // Reg 0   40.000.000,0 Hz
 }
 
 void set_freq_3() {                 //  calculated for 10 MHz Ref.
@@ -191,36 +195,39 @@ void set_freq_5() {                 //  calculated for 10 MHz Ref.
 #ifdef DEBUG_VIA_SERIAL
     Serial.println("ADF4351 set freq 5 command");
 #endif
+//Q:10 Freq: 1296.10MHz RFstep: 10.000kHz Regs:   00580005  009c803c  000004b3  18004e42  08001f41  008186e0
     ADF4351_Frequenz( 0x00580005);  // Reg 5
-    ADF4351_Frequenz( 0x00C1043C);  // Reg 4
+    ADF4351_Frequenz( 0x009c803c);  // Reg 4
     ADF4351_Frequenz( 0x000004B3);  // Reg 3
-    ADF4351_Frequenz( 0x18015E42);  // Reg 2
-    ADF4351_Frequenz( 0x080083E9);  // Reg 1
-    ADF4351_Frequenz( 0x02D00000);  // Reg 0   180.000.000,0 Hz
+    ADF4351_Frequenz( 0x18004e42);  // Reg 2
+    ADF4351_Frequenz( 0x08001f41);  // Reg 1
+    ADF4351_Frequenz( 0x008186e0);  // Reg 0  1296.100.000,0 Hz
 }
 
 void set_freq_6() {                 //  calcd for 10 MHz Ref.
 #ifdef DEBUG_VIA_SERIAL
     Serial.println("ADF4351 set freq 6 command");
 #endif
+//Q:10 Freq:  432.10MHz RFstep: 10.000kHz Regs:   00580005  00bc803c  000004b3  18004e42  08001f41  00ac9540
     ADF4351_Frequenz( 0x00580005);  // Reg 5
-    ADF4351_Frequenz( 0x00B1043C);  // Reg 4
+    ADF4351_Frequenz( 0x00bc803c);  // Reg 4
     ADF4351_Frequenz( 0x000004B3);  // Reg 3
-    ADF4351_Frequenz( 0x18015E42);  // Reg 2
-    ADF4351_Frequenz( 0x080087D1);  // Reg 1
-    ADF4351_Frequenz( 0x03600320);  // Reg 0  432,1 MHz
+    ADF4351_Frequenz( 0x18004e42);  // Reg 2
+    ADF4351_Frequenz( 0x08001f41);  // Reg 1
+    ADF4351_Frequenz( 0x00ac9540);  // Reg 0
 }
 
-void set_freq_7() {                 //  calcd for 25 MHz Ref.
+void set_freq_7() {                 //  calcd for 10 MHz Ref.
 #ifdef DEBUG_VIA_SERIAL
     Serial.println("ADF4351 set freq 7 command");
 #endif
+//Q:10 Freq: 2320.10MHz RFstep: 10.000kHz Regs:   00580005  008c803c  000004b3  18004e42  08001f41  00740050
     ADF4351_Frequenz( 0x00580005);  // Reg 5
-    ADF4351_Frequenz( 0x00b080fC);  // Reg 4
+    ADF4351_Frequenz( 0x008c803c);  // Reg 4
     ADF4351_Frequenz( 0x000004B3);  // Reg 3
-    ADF4351_Frequenz( 0x00065eC2);  // Reg 2
-    ADF4351_Frequenz( 0x08008029);  // Reg 1
-    ADF4351_Frequenz( 0x06c00020);  // Reg 0  432,1 MHz
+    ADF4351_Frequenz( 0x18004e42);  // Reg 2
+    ADF4351_Frequenz( 0x08001f41);  // Reg 1
+    ADF4351_Frequenz( 0x00740050);  // Reg 0
 }
 
 // Arduino needs this setup function
@@ -306,7 +313,7 @@ void loop()
                     break;
             case 6: set_freq_6();   //  432.1 MHz  - 10MHz Ref.
                     break;
-            case 7: set_freq_7();   //  432.1 MHz  - !!! 25MHz Ref. !!!
+            case 7: set_freq_7();   // 2320.1 MHz  - 10MHz Ref.
                     break;
         }
     }
