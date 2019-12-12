@@ -668,11 +668,7 @@ Text Notes 1400 6850 0    50   ~ 0
 Wire Wire Line
 	2900 2400 5350 2400
 NoConn ~ 5100 4250
-NoConn ~ 5100 5150
-NoConn ~ 5100 4550
-NoConn ~ 5100 4450
 NoConn ~ 5100 4350
-NoConn ~ 6100 4850
 NoConn ~ 6100 4950
 NoConn ~ 6100 5050
 NoConn ~ 6100 5150
@@ -765,58 +761,27 @@ Connection ~ 9850 1600
 $Comp
 L Connector:Conn_01x04_Male J4
 U 1 1 5DA8A18A
-P 7300 5350
-F 0 "J4" H 7450 5050 50  0000 R CNN
-F 1 "Conn_01x04_Male" H 7600 5600 50  0000 R CNN
-F 2 "Connector_JST:JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical" H 7300 5350 50  0001 C CNN
-F 3 "~" H 7300 5350 50  0001 C CNN
-	1    7300 5350
-	1    0    0    1   
+P 8750 5750
+F 0 "J4" H 8900 5450 50  0000 R CNN
+F 1 "Conn_01x04_Male" H 9050 6000 50  0000 R CNN
+F 2 "Connector_JST:JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical" H 8750 5750 50  0001 C CNN
+F 3 "~" H 8750 5750 50  0001 C CNN
+	1    8750 5750
+	-1   0    0    -1  
 $EndComp
-Text Notes 7100 5200 0    50   ~ 0
+Text Notes 8950 6000 2    50   ~ 0
 SCL
-Text Notes 7100 5300 0    50   ~ 0
+Text Notes 8950 5900 2    50   ~ 0
 SDA
-$Comp
-L power:GND #PWR0103
-U 1 1 5DACFFCB
-P 7700 5450
-F 0 "#PWR0103" H 7700 5200 50  0001 C CNN
-F 1 "GND" H 7705 5277 50  0000 C CNN
-F 2 "" H 7700 5450 50  0001 C CNN
-F 3 "" H 7700 5450 50  0001 C CNN
-	1    7700 5450
-	1    0    0    -1  
-$EndComp
 Connection ~ 5800 3450
-Text Notes 7100 5400 0    50   ~ 0
+Text Notes 8950 5800 2    50   ~ 0
 +5V
 Wire Wire Line
-	6800 4900 7500 4900
-Wire Wire Line
-	7500 4900 7500 5150
-Wire Wire Line
-	6700 5250 6700 4800
-Wire Wire Line
-	6700 4800 7600 4800
-Wire Wire Line
-	7600 4800 7600 5250
-Wire Wire Line
-	7600 5250 7500 5250
-Wire Wire Line
-	7700 5350 7500 5350
-Wire Wire Line
 	5800 3450 7700 3450
-Wire Wire Line
-	7500 5450 7700 5450
-Text Notes 7100 5500 0    50   ~ 0
+Text Notes 8950 5700 2    50   ~ 0
 GND
 Wire Wire Line
-	6800 4900 6800 5350
-Wire Wire Line
 	6800 5350 6100 5350
-Wire Wire Line
-	6700 5250 6100 5250
 $Comp
 L power:GND #PWR07
 U 1 1 5DB61CD1
@@ -840,10 +805,7 @@ F 3 "~" H 8750 4900 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	8550 4800 7700 4800
-Connection ~ 7700 4800
-Wire Wire Line
-	7700 4800 7700 5350
+	8550 4800 8250 4800
 Wire Wire Line
 	7700 3450 7700 4800
 $Comp
@@ -914,4 +876,82 @@ F 3 "~" H 4950 5550 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	4800 5550 4800 5750
+$Comp
+L Connector:Conn_01x05_Male J8
+U 1 1 5DF0FDE2
+P 3800 4150
+F 0 "J8" H 3908 4431 50  0000 C CNN
+F 1 "Conn_01x05_Male" V 3700 4100 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 3800 4150 50  0001 C CNN
+F 3 "~" H 3800 4150 50  0001 C CNN
+	1    3800 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5DF125BA
+P 4000 3950
+F 0 "#PWR?" H 4000 3700 50  0001 C CNN
+F 1 "GND" H 4005 3777 50  0000 C CNN
+F 2 "" H 4000 3950 50  0001 C CNN
+F 3 "" H 4000 3950 50  0001 C CNN
+	1    4000 3950
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4550 5150 5100 5150
+Wire Wire Line
+	4650 4250 4650 4550
+Wire Wire Line
+	4650 4550 5100 4550
+Wire Wire Line
+	4750 4150 4750 4450
+Wire Wire Line
+	4750 4450 5100 4450
+Wire Wire Line
+	4550 4350 4550 5150
+Wire Wire Line
+	6100 4850 6200 4850
+Wire Wire Line
+	6200 4850 6200 3550
+Wire Wire Line
+	6200 3550 4450 3550
+Wire Wire Line
+	4450 3550 4450 4050
+Wire Wire Line
+	4000 4050 4450 4050
+Wire Wire Line
+	4000 4150 4750 4150
+Wire Wire Line
+	4650 4250 4000 4250
+Wire Wire Line
+	4000 4350 4550 4350
+Wire Wire Line
+	8550 4900 8350 4900
+Wire Wire Line
+	8350 4900 8350 5650
+Wire Wire Line
+	8350 5650 8550 5650
+Connection ~ 8550 4900
+Wire Wire Line
+	8550 5750 8250 5750
+Wire Wire Line
+	8250 5750 8250 4800
+Connection ~ 8250 4800
+Wire Wire Line
+	8250 4800 7700 4800
+Text Notes 8950 4950 2    50   ~ 0
+GND
+Text Notes 8950 4150 2    50   ~ 0
+GND
+Wire Wire Line
+	6800 5350 6800 5950
+Wire Wire Line
+	6800 5950 8550 5950
+Wire Wire Line
+	6900 5250 6900 5850
+Wire Wire Line
+	6900 5850 8550 5850
+Wire Wire Line
+	6100 5250 6900 5250
 $EndSCHEMATC
