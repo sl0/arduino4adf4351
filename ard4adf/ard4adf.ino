@@ -131,26 +131,38 @@ void set_freq_0() {                 //  calculated for 10 MHz Ref.
 #ifdef DEBUG_VIA_SERIAL
     Serial.println("ADF4351 set freq 0 command");
 #endif
-//Q:10 Freq:  101.00MHz RFstep: 10.000kHz Regs:   00580005  00dc803c  000004b3  18004e42  08001f41  00a18640
+// Q:10 Freq: 1728.001MHz
+//                i=5=> 00580005
     ADF4351_Frequenz( 0x00580005);  // Reg 5
-    ADF4351_Frequenz( 0x00dc803c);  // Reg 4
+//                i=4=> 009c8024
+    ADF4351_Frequenz( 0x009c8024);  // Reg 4
+//                i=3=> 000004b3
     ADF4351_Frequenz( 0x000004B3);  // Reg 3
+//                i=2=> 18004e42
     ADF4351_Frequenz( 0x18004e42);  // Reg 2
+//                i=1=> 08001f41
     ADF4351_Frequenz( 0x08001f41);  // Reg 1
-    ADF4351_Frequenz( 0x00a18640);  // Reg 0   101.000.000,0 Hz
+//                i=0=> 00ac92c0
+    ADF4351_Frequenz( 0x00ac92c0);  // Reg 0
 }
 
 void set_freq_1() {                 //  calculated for 10 MHz Ref.
 #ifdef DEBUG_VIA_SERIAL
     Serial.println("ADF4351 set freq 1 command");
 #endif
-//Q:10 Freq:  116.00MHz RFstep: 10.000kHz Regs:   00580005  00dc803c  000004b3  18004e42  08001f41  00b98640
+//Q:10 Freq: 1748.250MHz
+//                i=5=> 00580005
     ADF4351_Frequenz( 0x00580005);  // Reg 5
-    ADF4351_Frequenz( 0x00dc803c);  // Reg 4
+//                i=4=> 009c8024
+    ADF4351_Frequenz( 0x009c8024);  // Reg 4
+//                i=3=> 000004b3
     ADF4351_Frequenz( 0x000004B3);  // Reg 3
+//                i=2=> 18004e42
     ADF4351_Frequenz( 0x18004e42);  // Reg 2
+//                i=1=> 08001f41
     ADF4351_Frequenz( 0x08001f41);  // Reg 1
-    ADF4351_Frequenz( 0x00b98640);  // Reg 0   116.000.000,0 Hz
+//                i=0=> 00ae9450
+    ADF4351_Frequenz( 0x00ae9450);  // Reg 0
 }
 
 void set_freq_2() {                 //  calculated for 10 MHz Ref.
@@ -299,9 +311,9 @@ void loop()
     Serial.println(jumper_value, HEX);
 #endif
         switch(jumper_value) {
-            case 0: set_freq_0();   //  101.0 MHz  - 10MHz Ref.
+            case 0: set_freq_0();   // 1728.000 MHz - 10MHz Ref.
                     break;
-            case 1: set_freq_1();   //  116.0 MHz  - 10MHz Ref.
+            case 1: set_freq_1();   // 1748.250 MHz - 10MHz Ref.
                     break;
             case 2: set_freq_2();   //  144.0 MHz  - 10MHz Ref.
                     break;
